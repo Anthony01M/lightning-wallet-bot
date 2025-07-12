@@ -49,7 +49,7 @@ LNWallet Bot is a full-stack application consisting of:
 - discord.js
 
 ### `💾` Database
-- MariaDB
+- PostgreSQL
 
 ### `⚡` Lightning Integration
 - [Speed Wallet](https://links.speed.app/referral?referral_code=G616LL) - Primary wallet provider
