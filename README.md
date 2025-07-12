@@ -58,7 +58,7 @@ LNWallet Bot is a full-stack application consisting of:
 
 ### Prerequisites
 - Node.js (v18 or higher)
-- npm or yarn
+- pnpm
 - Discord Application & Bot Token
 - Speed Wallet API credentials
 
@@ -77,6 +77,9 @@ cp .env.example .env
 # Configure your environment variables
 # Edit .env with your Discord bot token, database credentials, etc.
 
+# Build the frontend
+cd lib && pnpm build && cd ..
+
 # Start development servers
 pnpm dev
 ```
@@ -86,10 +89,14 @@ pnpm dev
 lnwallet-bot/
 ├── src/
 │   ├── bot/          # Discord bot implementation
-│   ├── api/          # REST API server
-│   ├── web/          # Frontend React application
+│   ├── api/          # Contains the REST API and web server (starts on the same port)
 │   ├── shared/       # Shared utilities and types
-│   └── database/     # Database models and migrations
+│   └── classes/      # Shared class definitions
+├── lib/              # Built bot (includes api, shared, and classes)
+├── drizzle/          # Database schemas and migrations
+├── public/           # React application
+│   ├── dist/         # Built frontend
+│   └── src/          # Frontend source code
 ├── docs/             # Documentation files
 ├── .github/          # GitHub templates and workflows
 └── README.md
