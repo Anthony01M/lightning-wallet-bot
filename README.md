@@ -77,8 +77,11 @@ cp .env.example .env
 # Configure your environment variables
 # Edit .env with your Discord bot token, database credentials, etc.
 
+# Run database migrations
+pnpm kit migrate
+
 # Build the frontend
-cd lib && pnpm build && cd ..
+cd public && pnpm install && pnpm build && cd ..
 
 # Start development servers
 pnpm dev
