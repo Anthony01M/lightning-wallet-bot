@@ -90,8 +90,10 @@ lnwallet-bot/
 ├── src/
 │   ├── bot/          # Discord bot implementation
 │   ├── api/          # Contains the REST API and web server (starts on the same port)
-│   ├── shared/       # Shared utilities and types
-│   └── classes/      # Shared class definitions
+│   ├── schema/       # Database schema
+│   ├── crontabs/     # Scheduled tasks and cron jobs
+│   ├── crontab.ts    # Schedule handler
+│   └── index.ts      # Main entry point for the bot and api
 ├── lib/              # Built bot (includes api, shared, and classes)
 ├── drizzle/          # Database schemas and migrations
 ├── public/           # React application
