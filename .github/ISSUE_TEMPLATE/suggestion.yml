@@ -1,0 +1,45 @@
+name: Suggestion
+description: Suggest a new feature or improvement
+title: "[Suggestion] "
+labels: ["template: suggestion", "type: feature"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Please describe your suggestion or feature request in detail.**
+        
+  - type: input
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Why is this feature useful or important?
+      placeholder: Explain the benefit or use case
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: How do you envision this feature working? Optional.
+      placeholder: Describe your idea or approach
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Any alternative ideas or approaches?
+      placeholder: Alternative solutions, if any
+
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: Impact
+      description: Areas this feature might affect (check all that apply)
+      options:
+        - label: User Experience
+        - label: Performance
+        - label: Security
+        - label: Documentation
+        - label: Other

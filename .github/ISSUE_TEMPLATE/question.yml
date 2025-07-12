@@ -1,0 +1,24 @@
+name: Question
+description: Ask a question or request clarification
+title: "[Question] "
+labels: ["template: question", "type: question"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Please describe your question or issue in detail.**
+
+  - type: input
+    id: context
+    attributes:
+      label: Context
+      description: Provide relevant context or background.
+      placeholder: e.g., What have you tried? What are you trying to achieve?
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Additional Details
+      description: Any additional information that might help.
+      placeholder: Add more info here

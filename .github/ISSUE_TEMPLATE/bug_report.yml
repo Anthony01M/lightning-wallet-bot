@@ -1,0 +1,59 @@
+name: Bug Report
+description: Report a bug or unintended behavior
+title: "[Bug] "
+labels: ["template: bug report", "type: bug"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Describe the bug**
+        A clear and concise description of what the bug is.
+
+  - type: input
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Please provide a step-by-step list to reproduce the issue.
+      placeholder: Example steps
+    validations:
+      required: true
+
+  - type: input
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen.
+      placeholder: Expected result
+    validations:
+      required: true
+
+  - type: input
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened.
+      placeholder: Actual result
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or Logs
+      description: If applicable, add screenshots or error logs to help explain the problem.
+      placeholder: Paste logs or upload images
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, version, Node.js version, browser, or other relevant info.
+      placeholder: E.g. Windows 10, Node 18, Chrome 115
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Version of the software you are using.
+      placeholder: e.g., v1.2.3

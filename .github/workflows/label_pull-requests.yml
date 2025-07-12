@@ -1,0 +1,33 @@
+name: Label PRs automatically
+
+on:
+  pull_request:
+    types: [opened, edited, reopened]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Label PR as feature
+        uses: actions-ecosystem/action-add-labels@v1
+        if: startsWith(github.event.pull_request.title, 'feat')
+        with:
+          labels: feature
+
+      - name: Label PR as bugfix
+        uses: actions-ecosystem/action-add-labels@v1
+        if: startsWith(github.event.pull_request.title, 'fix')
+        with:
+          labels: bug
+
+      - name: Label PR as documentation
+        uses: actions-ecosystem/action-add-labels@v1
+        if: startsWith(github.event.pull_request.title, 'docs')
+        with:
+          labels: documentation
+
+      - name: Label PR as enhancement
+        uses: actions-ecosystem/action-add-labels@v1
+        if: startsWith(github.event.pull_request.title, 'refactor')
+        with:
+          labels: enhancement
