@@ -1,0 +1,32 @@
+[
+	{
+		"level": 1,
+		"require": {
+			"product": 2
+		},
+		"reward": {
+			"satoshi": 25
+		},
+		"name": "Level 1"
+	},
+	{
+		"level": 2,
+		"require": {
+			"product": 4
+		},
+		"reward": {
+			"satoshi": 50
+		},
+		"name": "Level 2"
+	},
+	{
+		"level": 3,
+		"require": {
+			"product": 4
+		},
+		"reward": {
+			"satoshi": 75
+		},
+		"name": "Level 3"
+	}
+]

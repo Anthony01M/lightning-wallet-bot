@@ -1,0 +1,38 @@
+[
+	{
+		"timeFrame": "1_month",
+		"name": "Monthly",
+		"durationMonths": 1,
+		"priceSatoshi": 1000,
+		"priceUSD": 1.00,
+		"discountPercent": 0,
+		"platformCutPercent": 20
+	},
+	{
+		"timeFrame": "3_months",
+		"name": "Quarterly",
+		"durationMonths": 3,
+		"priceSatoshi": 2850,
+		"priceUSD": 2.85,
+		"discountPercent": 5,
+		"platformCutPercent": 17.5
+	},
+	{
+		"timeFrame": "6_months",
+		"name": "Semi-Annually",
+		"durationMonths": 6,
+		"priceSatoshi": 5280,
+		"priceUSD": 5.28,
+		"discountPercent": 12,
+		"platformCutPercent": 15
+	},
+	{
+		"timeFrame": "12_months",
+		"name": "Annually",
+		"durationMonths": 12,
+		"priceSatoshi": 9600,
+		"priceUSD": 9.60,
+		"discountPercent": 20,
+		"platformCutPercent": 12.5
+	}
+]

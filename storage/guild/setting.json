@@ -1,0 +1,17 @@
+{
+	"store": {
+		"enabled": false,
+		"purchase": {
+			"thankYou": {
+				"enabled": true,
+				"message": "Thank you for your purchase! Your role has been assigned."
+			}
+		},
+		"audit": {
+			"channelId": null
+		},
+		"booster": {
+			"role": null
+		}
+	}
+}

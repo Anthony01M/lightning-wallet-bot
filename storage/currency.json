@@ -1,0 +1,20 @@
+{
+	"satoshi": {
+		"name": "Satoshi",
+		"symbol": "sats",
+		"decimals": 0,
+		"isStablecoin": false
+	},
+	"usdt": {
+		"name": "Tether USD",
+		"symbol": "USDT",
+		"decimals": 8,
+		"isStablecoin": true
+	},
+	"usdc": {
+		"name": "USD Coin",
+		"symbol": "USDC",
+		"decimals": 8,
+		"isStablecoin": true
+	}
+}

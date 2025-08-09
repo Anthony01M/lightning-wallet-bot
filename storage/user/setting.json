@@ -1,0 +1,23 @@
+{
+	"withdrawal": {
+		"cooldownMinutes": 60,
+		"limits": {
+			"satoshi": 1000,
+			"usdt": 1,
+			"usdc": 1
+		}
+	},
+	"invoice": {
+		"expiryMinutes": 10
+	},
+	"friend": {
+		"limits": {
+			"max": 25,
+			"request": {
+				"incoming": {
+					"max": 250
+				}
+			}
+		}
+	}
+}

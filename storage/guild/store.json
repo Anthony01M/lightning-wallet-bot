@@ -1,0 +1,50 @@
+[
+	{
+		"id": "sellable_roles",
+		"name": "Increase Sellable Roles",
+		"description": "Increase the amount of roles your server can sell",
+		"category": "roles",
+		"maxTier": 5,
+		"tiers": [
+			{
+				"tier": 1,
+				"amount": 3,
+				"priceSatoshi": 0,
+				"priceUsd": 0
+			},
+			{
+				"tier": 2,
+				"amount": 6,
+				"priceSatoshi": 50,
+				"priceUsd": 0.05
+			},
+			{
+				"tier": 3,
+				"amount": 9,
+				"priceSatoshi": 100,
+				"priceUsd": 0.1
+			},
+			{
+				"tier": 4,
+				"amount": 12,
+				"priceSatoshi": 150,
+				"priceUsd": 0.15
+			},
+			{
+				"tier": 5,
+				"amount": 15,
+				"priceSatoshi": 200,
+				"priceUsd": 0.2
+			}
+		]
+	},
+	{
+		"id": "thank_you_message",
+		"name": "Thank You Message",
+		"description": "Set a thank you message when buyers purchase server products",
+		"category": "message",
+		"priceSatoshi": 250,
+		"priceUsd": 0.25,
+		"isPermanent": true
+	}
+]

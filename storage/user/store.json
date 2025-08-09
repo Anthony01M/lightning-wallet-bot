@@ -1,0 +1,377 @@
+[
+	{
+		"id": "withdrawal_limit_satoshi",
+		"name": "Increase Satoshi Withdrawal Limit",
+		"description": "Increase the amount of Satoshi you can withdraw per day",
+		"category": "withdrawal_limit",
+		"currency": "satoshi",
+		"maxTier": 15,
+		"tiers": [
+			{
+				"tier": 1,
+				"cap": 1000,
+				"priceSatoshi": 0
+			},
+			{
+				"tier": 2,
+				"cap": 2000,
+				"priceSatoshi": 25
+			},
+			{
+				"tier": 3,
+				"cap": 3000,
+				"priceSatoshi": 50
+			},
+			{
+				"tier": 4,
+				"cap": 4000,
+				"priceSatoshi": 75
+			},
+			{
+				"tier": 5,
+				"cap": 5000,
+				"priceSatoshi": 100
+			},
+			{
+				"tier": 6,
+				"cap": 6000,
+				"priceSatoshi": 125
+			},
+			{
+				"tier": 7,
+				"cap": 7000,
+				"priceSatoshi": 150
+			},
+			{
+				"tier": 8,
+				"cap": 8000,
+				"priceSatoshi": 175
+			},
+			{
+				"tier": 9,
+				"cap": 9000,
+				"priceSatoshi": 200
+			},
+			{
+				"tier": 10,
+				"cap": 10000,
+				"priceSatoshi": 225
+			},
+			{
+				"tier": 11,
+				"cap": 11000,
+				"priceSatoshi": 250
+			},
+			{
+				"tier": 12,
+				"cap": 12000,
+				"priceSatoshi": 275
+			},
+			{
+				"tier": 13,
+				"cap": 13000,
+				"priceSatoshi": 300
+			},
+			{
+				"tier": 14,
+				"cap": 14000,
+				"priceSatoshi": 325
+			},
+			{
+				"tier": 15,
+				"cap": 15000,
+				"priceSatoshi": 350
+			}
+		]
+	},
+	{
+		"id": "withdrawal_limit_usdt",
+		"name": "Increase USDT Withdrawal Limit",
+		"description": "Increase the amount of USDT you can withdraw per day",
+		"category": "withdrawal_limit",
+		"currency": "usdt",
+		"maxTier": 15,
+		"tiers": [
+			{
+				"tier": 1,
+				"cap": 1,
+				"priceUsd": 0
+			},
+			{
+				"tier": 2,
+				"cap": 2,
+				"priceUsd": 0.025
+			},
+			{
+				"tier": 3,
+				"cap": 3,
+				"priceUsd": 0.05
+			},
+			{
+				"tier": 4,
+				"cap": 4,
+				"priceUsd": 0.075
+			},
+			{
+				"tier": 5,
+				"cap": 5,
+				"priceUsd": 0.1
+			},
+			{
+				"tier": 6,
+				"cap": 6,
+				"priceUsd": 0.125
+			},
+			{
+				"tier": 7,
+				"cap": 7,
+				"priceUsd": 0.15
+			},
+			{
+				"tier": 8,
+				"cap": 8,
+				"priceUsd": 0.175
+			},
+			{
+				"tier": 9,
+				"cap": 9,
+				"priceUsd": 0.2
+			},
+			{
+				"tier": 10,
+				"cap": 10,
+				"priceUsd": 0.225
+			},
+			{
+				"tier": 11,
+				"cap": 11,
+				"priceUsd": 0.25
+			},
+			{
+				"tier": 12,
+				"cap": 12,
+				"priceUsd": 0.275
+			},
+			{
+				"tier": 13,
+				"cap": 13,
+				"priceUsd": 0.3
+			},
+			{
+				"tier": 14,
+				"cap": 14,
+				"priceUsd": 0.325
+			},
+			{
+				"tier": 15,
+				"cap": 15,
+				"priceUsd": 0.35
+			}
+		]
+	},
+	{
+		"id": "withdrawal_limit_usdc",
+		"name": "Increase USDC Withdrawal Limit",
+		"description": "Increase the amount of USDC you can withdraw per day",
+		"category": "withdrawal_limit",
+		"currency": "usdc",
+		"maxTier": 15,
+		"tiers": [
+			{
+				"tier": 1,
+				"cap": 1,
+				"priceUsd": 0
+			},
+			{
+				"tier": 2,
+				"cap": 2,
+				"priceUsd": 0.025
+			},
+			{
+				"tier": 3,
+				"cap": 3,
+				"priceUsd": 0.05
+			},
+			{
+				"tier": 4,
+				"cap": 4,
+				"priceUsd": 0.075
+			},
+			{
+				"tier": 5,
+				"cap": 5,
+				"priceUsd": 0.1
+			},
+			{
+				"tier": 6,
+				"cap": 6,
+				"priceUsd": 0.125
+			},
+			{
+				"tier": 7,
+				"cap": 7,
+				"priceUsd": 0.15
+			},
+			{
+				"tier": 8,
+				"cap": 8,
+				"priceUsd": 0.175
+			},
+			{
+				"tier": 9,
+				"cap": 9,
+				"priceUsd": 0.2
+			},
+			{
+				"tier": 10,
+				"cap": 10,
+				"priceUsd": 0.225
+			},
+			{
+				"tier": 11,
+				"cap": 11,
+				"priceUsd": 0.25
+			},
+			{
+				"tier": 12,
+				"cap": 12,
+				"priceUsd": 0.275
+			},
+			{
+				"tier": 13,
+				"cap": 13,
+				"priceUsd": 0.3
+			},
+			{
+				"tier": 14,
+				"cap": 14,
+				"priceUsd": 0.325
+			},
+			{
+				"tier": 15,
+				"cap": 15,
+				"priceUsd": 0.35
+			}
+		]
+	},
+	{
+		"id": "withdrawal_cooldown",
+		"name": "Decrease Withdrawal Cooldown",
+		"description": "Decrease the time you need to wait between withdrawals",
+		"category": "cooldown",
+		"maxTier": 7,
+		"tiers": [
+			{
+				"tier": 1,
+				"time": 60,
+				"priceSatoshi": 0,
+				"priceUsd": 0
+			},
+			{
+				"tier": 2,
+				"time": 55,
+				"priceSatoshi": 35,
+				"priceUsd": 0.035
+			},
+			{
+				"tier": 3,
+				"time": 50,
+				"priceSatoshi": 70,
+				"priceUsd": 0.07
+			},
+			{
+				"tier": 4,
+				"time": 45,
+				"priceSatoshi": 105,
+				"priceUsd": 0.105
+			},
+			{
+				"tier": 5,
+				"time": 40,
+				"priceSatoshi": 140,
+				"priceUsd": 0.14
+			},
+			{
+				"tier": 6,
+				"time": 35,
+				"priceSatoshi": 175,
+				"priceUsd": 0.175
+			},
+			{
+				"tier": 7,
+				"time": 30,
+				"priceSatoshi": 210,
+				"priceUsd": 0.21
+			}
+		]
+	},
+	{
+		"id": "max_friends",
+		"name": "Increase Friend Limit",
+		"description": "Increase the amount of friends you can accept",
+		"category": "friends",
+		"maxTier": 10,
+		"tiers": [
+			{
+				"tier": 1,
+				"cap": 25,
+				"priceSatoshi": 0,
+				"priceUsd": 0
+			},
+			{
+				"tier": 2,
+				"cap": 50,
+				"priceSatoshi": 15,
+				"priceUsd": 0.015
+			},
+			{
+				"tier": 3,
+				"cap": 75,
+				"priceSatoshi": 30,
+				"priceUsd": 0.03
+			},
+			{
+				"tier": 4,
+				"cap": 100,
+				"priceSatoshi": 45,
+				"priceUsd": 0.045
+			},
+			{
+				"tier": 5,
+				"cap": 125,
+				"priceSatoshi": 60,
+				"priceUsd": 0.06
+			},
+			{
+				"tier": 6,
+				"cap": 150,
+				"priceSatoshi": 75,
+				"priceUsd": 0.075
+			},
+			{
+				"tier": 7,
+				"cap": 175,
+				"priceSatoshi": 90,
+				"priceUsd": 0.09
+			},
+			{
+				"tier": 8,
+				"cap": 200,
+				"priceSatoshi": 105,
+				"priceUsd": 0.105
+			},
+			{
+				"tier": 9,
+				"cap": 225,
+				"priceSatoshi": 120,
+				"priceUsd": 0.12
+			},
+			{
+				"tier": 10,
+				"cap": 250,
+				"priceSatoshi": 135,
+				"priceUsd": 0.135
+			}
+		]
+	}
+]

@@ -1,0 +1,53 @@
+[
+	{
+		"id": "speed",
+		"name": "Speed Wallet",
+		"displayName": "Speed Wallet",
+		"description": "Lightning wallet with fast transactions",
+		"website": "https://links.speed.app/referral?referral_code=G616LL",
+		"domains": [
+			"@speed.app",
+			"@tryspeed.com"
+		],
+		"isActive": true,
+		"supportedCurrencies": [
+			"satoshi",
+			"usdt",
+			"usdc"
+		],
+		"features": {
+			"deposits": true,
+			"withdrawals": true,
+			"lightning": true,
+			"onchain": false
+		},
+		"limits": {
+			"minDeposit": {
+				"satoshi": 1,
+				"usdt": 0.001,
+				"usdc": 0.001
+			},
+			"maxDeposit": {
+				"satoshi": 1000000,
+				"usdt": 1000,
+				"usdc": 1000
+			},
+			"defaultWithdrawalLimits": {
+				"satoshi": 1000,
+				"usdt": 1,
+				"usdc": 1
+			}
+		},
+		"apiConfig": {
+			"baseUrl": "https://api.speed.app",
+			"apiVersion": "v1",
+			"requiresApiKey": true,
+			"endpoints": {
+				"createInvoice": "/invoice/create",
+				"checkPayment": "/invoice/check",
+				"sendPayment": "/payment/send",
+				"getBalance": "/wallet/balance"
+			}
+		}
+	}
+]
