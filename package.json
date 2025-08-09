@@ -1,0 +1,47 @@
+{
+	"name": "lnwallet",
+	"version": "1.0.0",
+	"description": "A lightning network wallet discord bot, built with discord.js.",
+	"author": "Anthony01M",
+	"license": "Apache-2.0",
+	"scripts": {
+		"build": "rm -rf lib && esbuild \"src/**/*.ts\" --platform=node --sourcemap --ignore-annotations --format=cjs --target=es2022 --outdir=lib && esbuild src/index.ts --platform=node --sourcemap --ignore-annotations --format=cjs --target=es2022 --outdir=lib --banner:js=\"require('module-alias').addAlias('@', __dirname);\"",
+		"kit": "drizzle-kit",
+		"lint": "tsc",
+		"dev": "pnpm build && cd lib && node --enable-source-maps index && cd .."
+	},
+	"engines": {
+		"node": ">=22.9.0"
+	},
+	"keywords": [
+		"lnwallet",
+		"lightning",
+		"bitcoin",
+		"discord",
+		"bot"
+	],
+	"dependencies": {
+		"@rjweb/runtime-node": "^1.1.1",
+		"@rjweb/sentry": "^2.1.5",
+		"@rjweb/utils": "^1.12.28",
+		"@sentry/node": "7.119.0",
+		"ansi-colors": "^4.1.3",
+		"axios": "^1.10.0",
+		"discord.js": "^14.21.0",
+		"drizzle-kit": "^0.31.4",
+		"drizzle-orm": "^0.44.2",
+		"ioredis": "^5.6.1",
+		"module-alias": "^2.2.3",
+		"node-cron": "^4.2.1",
+		"pg": "^8.16.3",
+		"rjweb-server": "^9.8.6",
+		"ts-arithmetic": "^0.1.1",
+		"zod": "^4.0.5"
+	},
+	"devDependencies": {
+		"@types/node-cron": "^3.0.11",
+		"@types/pg": "^8.15.4",
+		"esbuild": "^0.25.6",
+		"typescript": "^5.8.3"
+	}
+}
