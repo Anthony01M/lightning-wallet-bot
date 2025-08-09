@@ -208,19 +208,81 @@ Sub-Commands:
    Sub-Sub-Commands:
 	1. satoshi \[required: number—amount\] (optional: duration) (optional: uses)
 	   
-	   generate a redeemable code with a specific amount of Satoshi (minimum: 5, maximum: 10,000), should duration be provided, the code will be available for that long, default is infinite, the duration length will be minimum 10 minutes and maximum 30 days, should uses be provided, it will override the default value of 1 to be the amount of usage, minimum being 1, maximum being 100.
+	   generate a redeemable code with a specific amount of Satoshi (minimum: 1, maximum: 10,000), should duration be provided, the code will be available for that long, default is infinite, the duration length will be minimum 10 minutes and maximum 30 days, should uses be provided, it will override the default value of 1 to be the amount of usage, minimum being 1, maximum being 100.
 	2. usdt \[required: number—amount\] (optional: duration) (optional: uses)
 	   
-	   generate a redeemable code with a specific amount of USDT (minimum: 0.005, maximum: 10), should duration be provided, the code will be available for that long, default is infinite, the duration length will be minimum 10 minutes and maximum 30 days, should uses be provided, it will override the default value of 1 to be the amount of usage, minimum being 1, maximum being 100.
+	   generate a redeemable code with a specific amount of USDT (minimum: 0.001, maximum: 10), should duration be provided, the code will be available for that long, default is infinite, the duration length will be minimum 10 minutes and maximum 30 days, should uses be provided, it will override the default value of 1 to be the amount of usage, minimum being 1, maximum being 100.
 	3. usdc \[required: number—amount\] (optional: duration) (optional: uses)
 	   
-	   generate a redeemable code with a specific amount of USDC (minimum: 0.005, maximum: 10), should duration be provided, the code will be available for that long, default is infinite, the duration length will be minimum 10 minutes and maximum 30 days, should uses be provided, it will override the default value of 1 to be the amount of usage, minimum being 1, maximum being 100.
+	   generate a redeemable code with a specific amount of USDC (minimum: 0.001, maximum: 10), should duration be provided, the code will be available for that long, default is infinite, the duration length will be minimum 10 minutes and maximum 30 days, should uses be provided, it will override the default value of 1 to be the amount of usage, minimum being 1, maximum being 100.
 2. redeem \[required: string—code\]
    
    redeem a redeemable code .
 3. list
    
    list all codes (active, claimed).
+
+### Transaction (`/transaction`)
+> The Lightning Wallet Discord Bot will contain a transaction system, thus allowing users to view their previous transactions
+
+Embed containing:
+
+	Title: **Your Transactions — Overview**
+
+	Field:
+		Name: **Satoshi**
+		Value:
+			> Withdrawn: {amount}  
+			> Deposit: {amount}  
+			> {if tip sent higher than 0} Tip{if amount higher than 1: "s"} Sent: {amount}  
+			> {if tip received higher than 0} Tip{if amount higher than 1: "s"} Received: {amount}  
+			> {if rain sent higher than 0} Rain{if amount higher than 1: "s"} Sent: {amount}  
+			> {if rain received higher than 0} Rain{if amount higher than 1: "s"} Received: {amount}  
+			> {if drop sent higher than 0} Drop{if amount higher than 1: "s"} Sent: {amount}  
+			> {if drop received higher than 0} Drop{if amount higher than 1: "s"} Received: {amount}  
+			> {if mini-drop sent higher than 0} Mini-Drop{if amount higher than 1: "s"} Sent: {amount}  
+			> {if mini-drop received higher than 0} Mini-Drop{if amount higher than 1: "s"} Received: {amount}  
+			> {if red-packet sent higher than 0} Red-Packet{if amount higher than 1: "s"} Sent: {amount}  
+			> {if red-packet received higher than 0} Red-Packet{if amount higher than 1: "s"} Received: {amount}  
+
+	Field:
+		Name: **USDT**
+		Value:
+			> Withdrawn: {amount}  
+			> Deposit: {amount}  
+			> {if tip sent higher than 0} Tip{if amount higher than 1: "s"} Sent: {amount}  
+			> {if tip received higher than 0} Tip{if amount higher than 1: "s"} Received: {amount}  
+			> {if rain sent higher than 0} Rain{if amount higher than 1: "s"} Sent: {amount}  
+			> {if rain received higher than 0} Rain{if amount higher than 1: "s"} Received: {amount}  
+			> {if drop sent higher than 0} Drop{if amount higher than 1: "s"} Sent: {amount}  
+			> {if drop received higher than 0} Drop{if amount higher than 1: "s"} Received: {amount}  
+			> {if mini-drop sent higher than 0} Mini-Drop{if amount higher than 1: "s"} Sent: {amount}  
+			> {if mini-drop received higher than 0} Mini-Drop{if amount higher than 1: "s"} Received: {amount}  
+			> {if red-packet sent higher than 0} Red-Packet{if amount higher than 1: "s"} Sent: {amount}  
+			> {if red-packet received higher than 0} Red-Packet{if amount higher than 1: "s"} Received: {amount}  
+
+	Field:
+		Name: **USDC**
+		Value:
+			> Withdrawn: {amount}  
+			> Deposit: {amount}  
+			> {if tip sent higher than 0} Tip{if amount higher than 1: "s"} Sent: {amount}  
+			> {if tip received higher than 0} Tip{if amount higher than 1: "s"} Received: {amount}  
+			> {if rain sent higher than 0} Rain{if amount higher than 1: "s"} Sent: {amount}  
+			> {if rain received higher than 0} Rain{if amount higher than 1: "s"} Received: {amount}  
+			> {if drop sent higher than 0} Drop{if amount higher than 1: "s"} Sent: {amount}  
+			> {if drop received higher than 0} Drop{if amount higher than 1: "s"} Received: {amount}  
+			> {if mini-drop sent higher than 0} Mini-Drop{if amount higher than 1: "s"} Sent: {amount}  
+			> {if mini-drop received higher than 0} Mini-Drop{if amount higher than 1: "s"} Received: {amount}  
+			> {if red-packet sent higher than 0} Red-Packet{if amount higher than 1: "s"} Sent: {amount}  
+			> {if red-packet received higher than 0} Red-Packet{if amount higher than 1: "s"} Received: {amount}  
+
+Buttons:
+- Transactions (not clickable)
+- {if current page is not Overview} Overview
+- {if current page is not Satoshi} Satoshi
+- {if current page is not USDT} USDT
+- {if current page is not USDC} USDC
 
 ### Store (`/store`)
 > The Lightning Wallet Discord Bot will contain a store system, to allow users purchasing locked features and roles (for _guild-installed_ applications).
@@ -367,15 +429,15 @@ Sub-Commands:
 > The Lightning Wallet Discord Bot will contain a mine-drop system, allowing users to enjoy the mini-game service that we provide.
 
 Sub-Commands:
-1. satoshi \[required: number—amount\] (optional: duration)
+1. satoshi \[required: number—amount\] (optional: duration) (option: grid)
    
-   drop a 5x5 grid mine which consists of bombs and Satoshi (minimum: 1, maximum: 5,000), should duration (minimum: 15 seconds, maximum: 24 hours) be specified, the mine-drop will then be available for that specific duration, otherwise, it will exist forever.
+   drop a 3x5 by default (min: 3x5, max: 5x5) grid mine which consists of bombs and Satoshi (minimum: 1, maximum: 5,000), should duration (minimum: 15 seconds, maximum: 24 hours) be specified, the mine-drop will then be available for that specific duration, otherwise, it will exist forever.
 2. usdt \[required: number—amount\] (optional: duration)
    
-   drop a 5x5 grid mine which consists of bombs and USDT (minimum: 0.001, maximum: 5), should duration (minimum: 15 seconds, maximum: 24 hours) be specified, the mine-drop will then be available for that specific duration, otherwise, it will exist forever.
+   drop a 3x5 by default (min: 3x5, max: 5x5) grid mine which consists of bombs and USDT (minimum: 0.001, maximum: 5), should duration (minimum: 15 seconds, maximum: 24 hours) be specified, the mine-drop will then be available for that specific duration, otherwise, it will exist forever.
 3. usdc \[required: number—amount\] (optional: duration)
    
-   drop a 5x5 grid mine which consists of bombs and Satoshi (minimum: 0.001, maximum: 5), should duration (minimum: 15 seconds, maximum: 24 hours) be specified, the mine-drop will then be available for that specific duration, otherwise, it will exist forever.
+   drop a 3x5 by default (min: 3x5, max: 5x5) grid mine which consists of bombs and Satoshi (minimum: 0.001, maximum: 5), should duration (minimum: 15 seconds, maximum: 24 hours) be specified, the mine-drop will then be available for that specific duration, otherwise, it will exist forever.
 
 ### Red-Packet (`/redpacket`)
 > The Lightning Wallet Discord Bot will contain a red-packet system, thus allowing a 1-time claimable (first come, first served) reward.
@@ -480,67 +542,7 @@ Should there be an available claimable reward, there will be a "Claim Reward{if 
 ## User Commands
 > These commands are available for the _user-installed_ application only.
 
-### Transaction (`/transaction`)
-> The Lightning Wallet Discord Bot will contain a transaction system, thus allowing users to view their previous transactions
-
-Embed containing:
-
-	Title: **Your Transactions — Overview**
-
-	Field:
-		Name: **Satoshi**
-		Value:
-			> Withdrawn: {amount}  
-			> Deposit: {amount}  
-			> {if tip sent higher than 0} Tip{if amount higher than 1: "s"} Sent: {amount}  
-			> {if tip received higher than 0} Tip{if amount higher than 1: "s"} Received: {amount}  
-			> {if rain sent higher than 0} Rain{if amount higher than 1: "s"} Sent: {amount}  
-			> {if rain received higher than 0} Rain{if amount higher than 1: "s"} Received: {amount}  
-			> {if drop sent higher than 0} Drop{if amount higher than 1: "s"} Sent: {amount}  
-			> {if drop received higher than 0} Drop{if amount higher than 1: "s"} Received: {amount}  
-			> {if mini-drop sent higher than 0} Mini-Drop{if amount higher than 1: "s"} Sent: {amount}  
-			> {if mini-drop received higher than 0} Mini-Drop{if amount higher than 1: "s"} Received: {amount}  
-			> {if red-packet sent higher than 0} Red-Packet{if amount higher than 1: "s"} Sent: {amount}  
-			> {if red-packet received higher than 0} Red-Packet{if amount higher than 1: "s"} Received: {amount}  
-
-	Field:
-		Name: **USDT**
-		Value:
-			> Withdrawn: {amount}  
-			> Deposit: {amount}  
-			> {if tip sent higher than 0} Tip{if amount higher than 1: "s"} Sent: {amount}  
-			> {if tip received higher than 0} Tip{if amount higher than 1: "s"} Received: {amount}  
-			> {if rain sent higher than 0} Rain{if amount higher than 1: "s"} Sent: {amount}  
-			> {if rain received higher than 0} Rain{if amount higher than 1: "s"} Received: {amount}  
-			> {if drop sent higher than 0} Drop{if amount higher than 1: "s"} Sent: {amount}  
-			> {if drop received higher than 0} Drop{if amount higher than 1: "s"} Received: {amount}  
-			> {if mini-drop sent higher than 0} Mini-Drop{if amount higher than 1: "s"} Sent: {amount}  
-			> {if mini-drop received higher than 0} Mini-Drop{if amount higher than 1: "s"} Received: {amount}  
-			> {if red-packet sent higher than 0} Red-Packet{if amount higher than 1: "s"} Sent: {amount}  
-			> {if red-packet received higher than 0} Red-Packet{if amount higher than 1: "s"} Received: {amount}  
-
-	Field:
-		Name: **USDC**
-		Value:
-			> Withdrawn: {amount}  
-			> Deposit: {amount}  
-			> {if tip sent higher than 0} Tip{if amount higher than 1: "s"} Sent: {amount}  
-			> {if tip received higher than 0} Tip{if amount higher than 1: "s"} Received: {amount}  
-			> {if rain sent higher than 0} Rain{if amount higher than 1: "s"} Sent: {amount}  
-			> {if rain received higher than 0} Rain{if amount higher than 1: "s"} Received: {amount}  
-			> {if drop sent higher than 0} Drop{if amount higher than 1: "s"} Sent: {amount}  
-			> {if drop received higher than 0} Drop{if amount higher than 1: "s"} Received: {amount}  
-			> {if mini-drop sent higher than 0} Mini-Drop{if amount higher than 1: "s"} Sent: {amount}  
-			> {if mini-drop received higher than 0} Mini-Drop{if amount higher than 1: "s"} Received: {amount}  
-			> {if red-packet sent higher than 0} Red-Packet{if amount higher than 1: "s"} Sent: {amount}  
-			> {if red-packet received higher than 0} Red-Packet{if amount higher than 1: "s"} Received: {amount}  
-
-Buttons:
-- Transactions (not clickable)
-- {if current page is not Overview} Overview
-- {if current page is not Satoshi} Satoshi
-- {if current page is not USDT} USDT
-- {if current page is not USDC} USDC
+Currently, there are no _user-installed_ application commands. The commands shown are from the _global commands section_, which are available for both _guild-installed_ and _user-installed_ applications.
 
 ## Level System
 > The Lightning Wallet Discord Bot rewards users with cryptocurrency (Satoshi) based on store purchase milestones.
