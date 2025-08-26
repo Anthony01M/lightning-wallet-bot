@@ -37,17 +37,6 @@
 				"usdt": 1,
 				"usdc": 1
 			}
-		},
-		"apiConfig": {
-			"baseUrl": "https://api.speed.app",
-			"apiVersion": "v1",
-			"requiresApiKey": true,
-			"endpoints": {
-				"createInvoice": "/invoice/create",
-				"checkPayment": "/invoice/check",
-				"sendPayment": "/payment/send",
-				"getBalance": "/wallet/balance"
-			}
 		}
 	}
 ]
