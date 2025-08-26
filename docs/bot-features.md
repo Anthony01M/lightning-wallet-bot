@@ -144,7 +144,7 @@ Sub-Commands:
 ### Friend (`/friend`)
 > The Lightning Wallet Discord Bot will contain friends, a way to promote friendship and advertise where people are hosting rains, drops, mini-drops, red-packets, trivia, etcetera.
 
-`⚠️` Notice: This is still experimental, and may change, but the concept will be kept unless we are limited by discord (_user-installed_ applications are affected by this). There will be a limited amount of friends, increasing is available through the store, default is at 25 friends, and, there will be a limited amount of incoming friend requests, which will be capped at 250 friend requests.
+`⚠️` Notice: This is still experimental, and may change, but the concept will be kept unless we are limited by discord (_user-installed_ applications are affected by this). There will be a limited amount of friends, increasing is available through the store, default is at 25 friends, and, there will be a limited amount of incoming and outgoing friend requests, which will be capped at 250 friend requests.
 
 Sub-Commands:
 1. list
