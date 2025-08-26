@@ -91,7 +91,7 @@ pnpm dev
 ```
 lnwallet-bot/
 ├── src/
-│   ├── bot/          # Discord bot implementation
+│   ├── discord/      # Discord bot implementation
 │   ├── api/          # Contains the REST API and web server (starts on the same port)
 │   ├── schema/       # Database schema
 │   ├── crontabs/     # Scheduled tasks and cron jobs
