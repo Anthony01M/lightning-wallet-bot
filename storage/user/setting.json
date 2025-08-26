@@ -8,13 +8,16 @@
 		}
 	},
 	"invoice": {
-		"expiryMinutes": 10
+		"expiryMinutes": 30
 	},
 	"friend": {
 		"limits": {
 			"max": 25,
 			"request": {
 				"incoming": {
+					"max": 250
+				},
+				"outgoing": {
 					"max": 250
 				}
 			}
