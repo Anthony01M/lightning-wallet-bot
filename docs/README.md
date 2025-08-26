@@ -5,7 +5,7 @@ Welcome to the comprehensive documentation for LNWallet Bot - a full-stack Light
 ## 📚 Documentation Overview
 
 ### 🤖 Discord Bot
-- **[Bot Features & Commands](bot-features.md)** - Complete guide to all bot commands, features, and systems
+- **[Bot Features & Commands](discord-features.md)** - Complete guide to all bot commands, features, and systems
 
 ### 🌐 Website
 - **[Website Documentation](website.md)** - User dashboard and web interface guide
@@ -19,12 +19,12 @@ Welcome to the comprehensive documentation for LNWallet Bot - a full-stack Light
 ## 🚀 Quick Start Guides
 
 ### For Users
-1. **[Getting Started with the Bot](bot-features.md#commands)** - Learn basic commands
+1. **[Getting Started with the Bot](discord-features.md#commands)** - Learn basic commands
 2. **[Setting Up Your Profile](website.md#profile-management)** - Configure your account
 3. **[Making Your First Transaction](website.md#wallet-management)** - Deposit and withdraw funds
 
 ### For Server Administrators
-1. **[Inviting the Bot](bot-setup.md)** - Add LNWallet Bot to your server *(coming soon)*
+1. **[Inviting the Bot](discord-setup.md)** - Add LNWallet Bot to your server *(coming soon)*
 2. **[Server Configuration](admin-guide.md)** - Configure bot settings *(coming soon)*
 3. **[Managing Server Store](bot-features.md#server)** - Set up server products
 

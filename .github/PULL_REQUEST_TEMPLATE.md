@@ -30,7 +30,7 @@ Please fill out this template to help us review your pull request efficiently.
 - [ ] 🏗️ Build/CI changes
 - [ ] 🎨 UI/UX improvement
 
-## � Discord Bot Specific Changes
+## 🤖 Discord Bot Specific Changes
 
 <!-- Check all that apply -->
 - [ ] Slash command changes
