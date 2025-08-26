@@ -5,10 +5,11 @@ import { guild } from "@/schema/guild"
 
 export const guildStoreSubscription = pgTable('guild_store_subscription', {
     id: serial('id').primaryKey(),
+
     guildId: integer('guild_id').references(() => guild.id).notNull(),
-    
     productId: text('product_id').notNull(),
-    productCategory: storeProductCategoryEnum('product_category').notNull(),
+    
+	productCategory: storeProductCategoryEnum('product_category').notNull(),
     
     currency: currencyEnum('currency').notNull(),
     recurringPrice: decimal('recurring_price', { precision: 20, scale: 8 }).notNull(),

@@ -4,6 +4,7 @@ import { user } from "@/schema/user"
 
 export const userSetting = pgTable('user_setting', {
 	id: serial('id').primaryKey(),
+
 	userId: integer('user_id').references(() => user.id, { onDelete: "cascade" }).notNull(),
 
 	public: boolean('public').default(true).notNull(),

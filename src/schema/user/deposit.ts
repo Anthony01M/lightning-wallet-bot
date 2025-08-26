@@ -5,6 +5,7 @@ import { user } from "@/schema/user"
 
 export const userDeposit = pgTable('user_deposit', {
 	id: serial('id').primaryKey(),
+
 	userId: integer('user_id').references(() => user.id, { onDelete: "cascade" }).notNull(),
 
 	currency: currencyEnum('currency').notNull(),

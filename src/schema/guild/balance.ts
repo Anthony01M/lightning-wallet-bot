@@ -5,6 +5,7 @@ import { guild } from "@/schema/guild"
 
 export const guildBalance = pgTable('guild_balance', {
 	id: serial('id').primaryKey(),
+
 	guildId: integer('guild_id').references(() => guild.id).notNull(),
 
 	currency: currencyEnum('currency').notNull(),

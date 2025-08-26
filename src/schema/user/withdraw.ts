@@ -6,6 +6,7 @@ import { user } from "@/schema/user"
 
 export const userWithdraw = pgTable('user_withdraw', {
 	id: serial('id').primaryKey(),
+
 	userId: integer('user_id').references(() => user.id, { onDelete: "cascade" }).notNull(),
 	walletId: integer('wallet_id').references(() => userWallet.id).notNull(),
 

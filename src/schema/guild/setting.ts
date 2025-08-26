@@ -4,6 +4,7 @@ import { guild } from "@/schema/guild"
 
 export const guildSetting = pgTable('guild_setting', {
 	id: serial('id').primaryKey(),
+	
 	guildId: integer('guild_id').references(() => guild.id).notNull(),
 
 	storeEnabled: boolean('store_enabled').default(false).notNull(),
