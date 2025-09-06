@@ -36,5 +36,5 @@ Promise.all([...filesystem.getFiles(`${__dirname}/crontabs`, { recursive: true }
 	}
 })]).then(() => {
 	//if (env.PORT) require('@/api')
-	require('@/bot')
+	require('@/discord')
 })
