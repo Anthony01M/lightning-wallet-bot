@@ -23,6 +23,7 @@ const infos = z.object({
 	LOG_LEVEL: z.union([z.literal('none'), z.literal('info'), z.literal('debug')]),
 
 	DEVELOPER_GUILD_ID: z.string(),
+	EMOJIS: z.string().transform(v => string.kv(v, null, '&', ':')),
 
 	ENCRYPTION: z.string().transform(v => string.kv(v, null, '&', ':')),
 	PORT: z.string().optional(),

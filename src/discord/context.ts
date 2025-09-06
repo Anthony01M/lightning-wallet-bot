@@ -4,10 +4,10 @@ import { Scope } from "@sentry/node"
 import { client } from "@/discord"
 import getVersion from "@/index"
 
-import env from "@/globals/env"
 import logger from "@/globals/logger"
 import db from "@/globals/database"
 import cache from "@/globals/cache"
+import env from "@/globals/env"
 
 import { PaginateType } from "@/discord/globals/classes/button"
 
@@ -53,11 +53,11 @@ export default class Context<Interaction extends any> {
 			new ActionRowBuilder()
 				.setComponents(
 					new ButtonBuilder()
-						.setEmoji('1150889388834820249')
+						.setEmoji(env.EMOJIS.REFRESH)
 						.setStyle(ButtonStyle.Primary)
 						.setCustomId(button('refresh')),
 					new ButtonBuilder()
-						.setEmoji('1150889245603528764')
+						.setEmoji(env.EMOJIS.BACK)
 						.setDisabled(page === 1)
 						.setStyle(ButtonStyle.Primary)
 						.setCustomId(button('back')),
@@ -67,7 +67,7 @@ export default class Context<Interaction extends any> {
 						.setStyle(ButtonStyle.Secondary)
 						.setCustomId('e'),
 					new ButtonBuilder()
-						.setEmoji('1150889195057991732')
+						.setEmoji(env.EMOJIS.NEXT)
 						.setDisabled(page >= Math.ceil(count / itemsPerPage))
 						.setStyle(ButtonStyle.Primary)
 						.setCustomId(button('next'))
@@ -75,13 +75,13 @@ export default class Context<Interaction extends any> {
 			new ActionRowBuilder()
 				.setComponents(
 					new ButtonBuilder()
-						.setEmoji('1150889245603528764')
+						.setEmoji(env.EMOJIS.FIRST_PAGE)
 						.setLabel('First Page')
 						.setStyle(ButtonStyle.Primary)
 						.setDisabled(page === 1)
 						.setCustomId(button('first')),
 					new ButtonBuilder()
-						.setEmoji('1150889195057991732')
+						.setEmoji(env.EMOJIS.LAST_PAGE)
 						.setLabel('Last Page')
 						.setStyle(ButtonStyle.Primary)
 						.setDisabled(page >= Math.ceil(count / itemsPerPage))

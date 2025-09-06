@@ -1,6 +1,5 @@
 import { string } from "@rjweb/utils"
 
-
 import env from "@/globals/env"
 
 const ENCRYPTION: Record<string, string> = env.ENCRYPTION as unknown as Record<string, string>
