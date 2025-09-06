@@ -1,4 +1,4 @@
-import * as enums from "@/schema/enums"
+export * from "@/schema/enums"
 
 export * from "@/schema/user"
 export * from "@/schema/user/action"
@@ -47,4 +47,3 @@ export * from "@/schema/guild/store/role/purchase"
 
 export * from "@/schema/guild/relation"
 
-export { enums }
