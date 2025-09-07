@@ -6,14 +6,17 @@ type Colors = typeof import('ansi-colors')
 
 class Logger {
 	protected content: any[] = []
+
 	public text(text: string | number, color: (c: Colors) => StyleFunction = (c) => c.reset): this {
 		this.content.push(color(colors)(text.toString()))
 		return this
 	}
+
 	public raw(content: any): this {
 		this.content.push(content)
 		return this
 	}
+
 	public info(): boolean {
 		if (env.LOG_LEVEL !== 'info' && env.LOG_LEVEL !== 'debug') return false
 		console.info(colors.bgBlue(' INF '), colors.gray(new Date().toLocaleDateString('de-DE', {
@@ -26,6 +29,7 @@ class Logger {
 		})), ...this.content)
 		return true
 	}
+
 	public error(): boolean {
 		if (env.LOG_LEVEL !== 'info' && env.LOG_LEVEL !== 'debug') return false
 		console.error(colors.bgRed(' ERR '), colors.gray(new Date().toLocaleDateString('de-DE', {
@@ -38,6 +42,7 @@ class Logger {
 		})), ...this.content)
 		return true
 	}
+
 	public debug(): boolean {
 		if (env.LOG_LEVEL !== 'debug') return false
 		console.error(colors.bgYellow(' DEB '), colors.gray(new Date().toLocaleDateString('de-DE', {

@@ -9,6 +9,7 @@ export abstract class Storage<T = any> {
 	constructor(filename: string) {
 		this.filePath = path.join(process.cwd(), 'storage', filename)
 	}
+
 	async load(): Promise<T> {
 		if (this.cache) {
 			return this.cache
@@ -24,10 +25,12 @@ export abstract class Storage<T = any> {
 			throw new Error(`Failed to load storage: ${error.message}`)
 		}
 	}
+
 	async reload(): Promise<T> {
 		this.cache = null
 		return this.load()
 	}
+
 	protected async save(data: T): Promise<void> {
 		try {
 			await fs.writeFile(this.filePath, JSON.stringify(data, null, 2))
