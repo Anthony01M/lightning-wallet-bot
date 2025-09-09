@@ -398,18 +398,59 @@ Those tiered product price are based on the 1st tier, for the 3rd tier upgrade, 
 > These commands are available for _guild-installed_ application only.
 
 ### Tip (`/tip`)
-> The Lightning Wallet Discord Bot will contain a tipping system, which provides the ability to tip a specific person a specific amount.
+> The Lightning Wallet Discord Bot will contain a tipping system, which provides the ability to tip a specific person, a group of users with a specific role, or users who are currently active.
 
 Sub-Commands:
-1. satoshi \[required: user—user\] \[required: number—amount\]
+1. user
+
+	tip a specific user.
+
+   Sub-Sub-Commands:
+   1. satoshi \[required: user—user\] \[required: number—amount\]
+
+		tip a specific user a specific amount of Satoshi (minimum: 1).
    
-   tip a specific user a specific amount of Satoshi (minimum: 1).
-2. usdt \[required: user—user\] \[required: number—amount\]
-   
-   tip a specific user a specific amount of USDT (minimum: 0.001).
-3. usdc \[required: user—user\] \[required: number—amount\]
-   
-   tip a specific user a specific amount of USDC (minimum: 0.001).
+   2. usdt \[required: user—user\] \[required: number—amount\]
+
+   	tip a specific user a specific amount of USDT (minimum: 0.001).
+
+   3. usdc \[required: user—user\] \[required: number—amount\]
+
+   	tip a specific user a specific amount of USDC (minimum: 0.001).
+
+2. role
+
+   tip user(s) who currently possess a specific role.
+
+   Sub-Sub-Commands:
+   1. satoshi \[required: role—role\] \[required: number—amount\] \[required: boolean—equal\] \(optional: boolean—active\)
+
+		tip user(s) who currently possess a specific role a specific amount of Satoshi (minimum: 1), should equal be true, each user will get the exact amount of Satoshi tipped, otherwise, it will be split between all of them, should active (duration: 30 minutes) be true, only users who are currently online will be tipped, otherwise, it will tip all users with that role.
+
+   2. usdt \[required: role—role\] \[required: number—amount\] \[required: boolean—equal\] \(optional: boolean—active\)
+
+   	tip user(s) who currently possess a specific role a specific amount of USDT (minimum: 0.001), should equal be true, each user will get the exact amount of USDT tipped, otherwise, it will be split between all of them, should active (duration: 30 minutes) be true, only users who are currently online will be tipped, otherwise, it will tip all users with that role.
+
+   3. usdc \[required: role—role\] \[required: number—amount\] \[required: boolean—equal\] \(optional: boolean—active\)
+
+   	tip user(s) who currently possess a specific role a specific amount of USDC (minimum: 0.001), should equal be true, each user will get the exact amount of USDC tipped, otherwise, it will be split between all of them, should active (duration: 30 minutes) be true, only users who are currently online will be tipped, otherwise, it will tip all users with that role.
+
+3. active
+
+	tip user(s) who are currently active.
+
+   Sub-Sub-Commands:
+   1. satoshi \[required: number—amount\] \[required: boolean—equal\]
+
+		tip user(s) who are currently active (duration: 30 minutes) a specific amount of Satoshi (minimum: 1), should equal be true, each user will get the exact amount of Satoshi tipped, otherwise, it will be split between all of them.
+
+   2. usdt \[required: number—amount\] \[required: boolean—equal\]
+
+   	tip user(s) who are currently active (duration: 30 minutes) a specific amount of USDT (minimum: 0.001), should equal be true, each user will get the exact amount of USDT tipped, otherwise, it will be split between all of them.
+
+   3. usdc \[required: number—amount\] \[required: boolean—equal\]
+
+   	tip user(s) who are currently active (duration: 30 minutes) a specific amount of USDC (minimum: 0.001), should equal be true, each user will get the exact amount of USDC tipped, otherwise, it will be split between all of them.
 
 ### Drop (`/drop`)
 > The Lightning Wallet Discord Bot will contain a drop system, which provides the ability to drop a specific amount that splits rewards between all participants.
