@@ -22,14 +22,10 @@ export default class RoleMenuBuilder<Excluded extends (keyof RoleMenuBuilder)[] 
 	public export(): Exported<Arguments> {
 		const fn: Exported<Arguments> & { m_name: string, listener: Function } = (interaction, ...args) => {
 			const guild = interaction.client.guilds.cache.get(interaction.guildId || '')
-			if (!guild) {
-				throw new Error('Guild not found')
-			}
+			if (!guild) throw new Error('Guild not found')
 			const raw = `${this.m_name}°${args.map((a) => JSON.stringify(a, bigintReplacer).replace(/°|\^/g, (c) => encodeURIComponent(c))).join('°')}`,
 				customId = customid.encode((interaction.client.user.id).concat((interaction.guildId ?? interaction.user.id) || 'g'), raw)
-			if (customId.length > 100) {
-				throw new Error('Custom ID exceeds the maximum length of 100 characters')
-			}
+			if (customId.length > 100) throw new Error('Custom ID exceeds the maximum length of 100 characters')
 			return customId
 		}
 		fn.m_name = this.m_name

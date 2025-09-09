@@ -9,6 +9,7 @@ export default class CustomEmbed extends EmbedBuilder {
 		super()
 		this.data.footer = { text: `⏰ ${(this.timeMs).toFixed(1)}ms ~ ${version}`.trimEnd() }
 	}
+
 	override setFooter(options: EmbedFooterOptions | null): this {
 		this.data.footer = { text: `⏰ ${(this.timeMs).toFixed(1)}ms ~ ${version} | ${options?.text}`, icon_url: options?.iconURL }
 		return this
