@@ -1,0 +1,8 @@
+import Event from "@/discord/globals/classes/event"
+
+import { Message } from "discord.js"
+
+export default new Event()
+	.listenTo((events) => events.GuildMemberAdd)
+	.listen<Message>(async (ctx) => {
+	})
